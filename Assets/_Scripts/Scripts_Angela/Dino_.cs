@@ -7,7 +7,7 @@ public class Dino_ : MonoBehaviour
     [SerializeField] float alturaSalto;
 
     [SerializeField] Animator animacion;
-
+    [SerializeField] float impulso;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,6 +26,8 @@ public class Dino_ : MonoBehaviour
         if (value.started)
         {
             animacion.SetBool("Salto_", true);
+            rb.linearVelocity = Vector2.zero;
+            rb.AddForce(Vector3.up * impulso);
         }
     }
 
