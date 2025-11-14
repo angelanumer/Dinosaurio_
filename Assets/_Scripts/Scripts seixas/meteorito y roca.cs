@@ -21,10 +21,13 @@ public class meteorito : MonoBehaviour
         transform.Translate(Vector2.left * velocidad * Time.deltaTime);
         if (transform.position.x < posicionMinima.x)
         {
-            transform .position = posicionInicial;
+            transform.position = posicionInicial;
             velocidad = velocidad + 0.5f;
         }
     }
 
-
+    void ReiniciarEnemigo()
+    {  
+    
+    }
 }
