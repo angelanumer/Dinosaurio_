@@ -34,5 +34,10 @@ public class Dino_ : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         animacion.SetBool("Salto_", false);
-    }
+    
+        if (collision.transform.tag == "Roca" || collision.transform.tag == "Meteorito")
+        {
+            Game_Manager_.Instancia.GameOver();
+        }
+}
 }
