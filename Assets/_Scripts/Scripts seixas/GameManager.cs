@@ -55,6 +55,7 @@ public class GAmeManager : MonoBehaviour
         enemigo.SetActive(true);
         tiempo = 0;
         cronometro = true;
+        enemigoscript.ReiniciarEnemigo();
 
     }
     

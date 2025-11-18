@@ -26,8 +26,9 @@ public class meteorito : MonoBehaviour
         }
     }
 
-    void ReiniciarEnemigo()
-    {  
-    
+   public void ReiniciarEnemigo()
+    {
+        transform.position = posicionInicial;
+        velocidad = 0.5f;
     }
 }
